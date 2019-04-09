@@ -23,6 +23,9 @@ gem "capistrano-rvm"
 # Support
 gem "config"
 
+# Firebase
+gem "firebase"
+
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "pry-byebug"
