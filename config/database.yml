@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  username: root
+  password:
+
+development:
+  <<: *default
+  database: db/my_cv_development
+
+test:
+  <<: *default
+  database: db/my_cv_test
+
+production:
+  <<: *default
+  database: my_cv_production
+  username: my_cv
+  password: <%= ENV['MY_CV_PASSWORD'] %>
